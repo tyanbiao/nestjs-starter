@@ -34,7 +34,7 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
-    "@hyperbolajs/eslint-config": "^1.0.3",
+    "@hyperbolajs/eslint-config": "^1.0.4",
     "@hyperbolajs/prettier-config": "^1.0.0",
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
