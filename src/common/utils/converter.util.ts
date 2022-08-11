@@ -32,3 +32,26 @@ export function encodeEntitySync<T extends { id: number | bigint } | null>(
 export function decodeHashid(hashid: string) {
     return hashids.decode(hashid)[0]
 }
+
+export function encodeHashid(id: number | bigint) {
+    return hashids.encode(id)
+}
+
+export function encodeResponse(data: unknown) {
+    if (typeof data === 'bigint') {
+        return encodeHashid(data)
+    }
+    if (typeof data === 'object') {
+        if (Array.isArray(data)) {
+            for (let i = 0; i < data.length; i++) {
+                data[i] = encodeResponse(data[i])
+            }
+            return data
+        }
+        for (const k in data) {
+            data[k] = encodeResponse(data[k])
+        }
+        return data
+    }
+    return data
+}

@@ -17,9 +17,17 @@ export class ExceptionsFilter implements ExceptionFilter {
             status = exception.getStatus()
             data.code = status
             const payload = exception.getResponse()
-            typeof payload === 'object' &&
-                (data.code = (payload as { code?: number })?.code || status)
             data.message = exception.message
+            if (typeof payload === 'string') {
+                data.message = `${data.message}: ${payload}`
+            } else if (typeof payload === 'object') {
+                const t = payload as {
+                    code?: number
+                    message?: string
+                }
+                data.code = t?.code ?? data.code
+                data.message = data.message + ' ' + (t?.message ?? '')
+            }
         }
         response.status(status).json(data)
     }
