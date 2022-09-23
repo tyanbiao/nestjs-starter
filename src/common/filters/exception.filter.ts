@@ -1,3 +1,4 @@
+import { restfulError } from '@hyperbolajs/nestjs-kit'
 import {
     Catch,
     ArgumentsHost,
@@ -5,7 +6,6 @@ import {
     HttpStatus,
     HttpException,
 } from '@nestjs/common'
-import { restfulError } from '../utils/restful.util'
 
 @Catch()
 export class ExceptionsFilter implements ExceptionFilter {

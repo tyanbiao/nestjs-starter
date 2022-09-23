@@ -5,6 +5,7 @@ specifiers:
   '@hyperbolajs/prettier-config': ^1.0.0
   '@nestjs/cli': ^9.1.1
   '@nestjs/common': ^9.1.1
+  '@nestjs/config': ^2.2.0
   '@nestjs/core': ^9.1.1
   '@nestjs/platform-express': ^9.1.1
   '@nestjs/schematics': ^9.0.0
@@ -25,6 +26,7 @@ specifiers:
   eslint-plugin-prettier: ^4.0.0
   hashids: ^2.2.10
   jest: 28.1.2
+  joi: ^17.6.1
   prettier: ^2.7.0
   prisma: ^4.3.1
   reflect-metadata: ^0.1.13
@@ -41,6 +43,7 @@ specifiers:
 
 dependencies:
   '@nestjs/common': 9.1.1_allg6cauirbqzgqcmexy2wdnoq
+  '@nestjs/config': 2.2.0_4n3ycpsuqlpcarpvaa3djcpybe
   '@nestjs/core': 9.1.1_rnu4wbspjtr3am5p7vy7xio2ie
   '@nestjs/platform-express': 9.1.1_xhkir6qpcnigaiptpizzepd5vm
   '@nestjs/swagger': 6.1.2_rujkijbukplmefxxkomlxbtn6y
@@ -49,6 +52,7 @@ dependencies:
   class-validator: 0.13.2
   dotenv-cli: 6.0.0
   hashids: 2.2.10
+  joi: 17.6.1
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   rxjs: 7.5.6
@@ -540,6 +544,16 @@ packages:
       - supports-color
     dev: true
 
+  /@hapi/hoek/9.3.0:
+    resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
+    dev: false
+
+  /@hapi/topo/5.1.0:
+    resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+    dev: false
+
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}
     engines: {node: '>=10.10.0'}
@@ -931,6 +945,22 @@ packages:
       tslib: 2.4.0
       uuid: 9.0.0
 
+  /@nestjs/config/2.2.0_4n3ycpsuqlpcarpvaa3djcpybe:
+    resolution: {integrity: sha512-78Eg6oMbCy3D/YvqeiGBTOWei1Jwi3f2pSIZcZ1QxY67kYsJzTRTkwRT8Iv30DbK0sGKc1mcloDLD5UXgZAZtg==}
+    peerDependencies:
+      '@nestjs/common': ^7.0.0 || ^8.0.0 || ^9.0.0
+      reflect-metadata: ^0.1.13
+      rxjs: ^6.0.0 || ^7.2.0
+    dependencies:
+      '@nestjs/common': 9.1.1_allg6cauirbqzgqcmexy2wdnoq
+      dotenv: 16.0.1
+      dotenv-expand: 8.0.3
+      lodash: 4.17.21
+      reflect-metadata: 0.1.13
+      rxjs: 7.5.6
+      uuid: 8.3.2
+    dev: false
+
   /@nestjs/core/9.1.1_rnu4wbspjtr3am5p7vy7xio2ie:
     resolution: {integrity: sha512-IFL9DAGFAFgVvIQDoXh248KH8Hqwj6x3Nz1ud4V1Gzv6FnsjANe4nhUAO9IJbUydtFAiNuclXC5gs2vbhBtqqg==}
     requiresBuild: true
@@ -1124,6 +1154,20 @@ packages:
   /@prisma/engines/4.3.1:
     resolution: {integrity: sha512-4JF/uMaEDAPdcdZNOrnzE3BvrbGpjgV0FcPT3EVoi6I86fWkloqqxBt+KcK/+fIRR0Pxj66uGR9wVH8U1Y13JA==}
     requiresBuild: true
+
+  /@sideway/address/4.1.4:
+    resolution: {integrity: sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+    dev: false
+
+  /@sideway/formula/3.0.0:
+    resolution: {integrity: sha512-vHe7wZ4NOXVfkoRb8T5otiENVlT7a3IAiw7H5M2+GO+9CDgcVUUsX1zalAztCmwyOr2RUTGJdgB+ZvSVqmdHmg==}
+    dev: false
+
+  /@sideway/pinpoint/2.0.0:
+    resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
+    dev: false
 
   /@sinclair/typebox/0.23.5:
     resolution: {integrity: sha512-AFBVi/iT4g20DHoujvMH1aEDn8fGJh4xsRGCP6d8RpLPMqsNPvW01Jcn0QysXTsg++/xj25NmJsGyH9xug/wKg==}
@@ -3550,6 +3594,16 @@ packages:
       - ts-node
     dev: true
 
+  /joi/17.6.1:
+    resolution: {integrity: sha512-Hl7/iBklIX345OCM1TiFSCZRVaAOLDGlWCp0Df2vWYgBgjkezaR7Kvm3joBciBHQjZj5sxXs859r6eqsRSlG8w==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+      '@hapi/topo': 5.1.0
+      '@sideway/address': 4.1.4
+      '@sideway/formula': 3.0.0
+      '@sideway/pinpoint': 2.0.0
+    dev: false
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: true
@@ -4824,6 +4878,11 @@ packages:
   /utils-merge/1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
 
   /uuid/9.0.0:
     resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
