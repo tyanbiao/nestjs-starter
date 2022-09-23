@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@hyperbolajs/eslint-config': ^1.0.4
+  '@hyperbolajs/nestjs-kit': ^1.0.0
   '@hyperbolajs/prettier-config': ^1.0.0
   '@nestjs/cli': ^9.1.1
   '@nestjs/common': ^9.1.1
@@ -24,7 +25,6 @@ specifiers:
   eslint: ^8.0.1
   eslint-config-prettier: ^8.3.0
   eslint-plugin-prettier: ^4.0.0
-  hashids: ^2.2.10
   jest: 28.1.2
   joi: ^17.6.1
   prettier: ^2.7.0
@@ -42,6 +42,7 @@ specifiers:
   webpack: ^5.0.0
 
 dependencies:
+  '@hyperbolajs/nestjs-kit': 1.0.0_cuyymkxypo2mw5ephsyhgkx76q
   '@nestjs/common': 9.1.1_allg6cauirbqzgqcmexy2wdnoq
   '@nestjs/config': 2.2.0_4n3ycpsuqlpcarpvaa3djcpybe
   '@nestjs/core': 9.1.1_rnu4wbspjtr3am5p7vy7xio2ie
@@ -51,7 +52,6 @@ dependencies:
   class-transformer: 0.5.1
   class-validator: 0.13.2
   dotenv-cli: 6.0.0
-  hashids: 2.2.10
   joi: 17.6.1
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
@@ -580,6 +580,24 @@ packages:
     transitivePeerDependencies:
       - prettier
     dev: true
+
+  /@hyperbolajs/nestjs-kit/1.0.0_cuyymkxypo2mw5ephsyhgkx76q:
+    resolution: {integrity: sha512-dSNF7s1+m0+ewxtNI0llHKKoeWbYPN+8GHdATM7CKFMSe+6YOanlAdHRRxHsUoBd8axH/R58XnjUaU535eBWZQ==}
+    peerDependencies:
+      '@nestjs/common': '>=9.0.0'
+      '@nestjs/core': '>=9.0.0'
+    dependencies:
+      '@nestjs/common': 9.1.1_allg6cauirbqzgqcmexy2wdnoq
+      '@nestjs/core': 9.1.1_rnu4wbspjtr3am5p7vy7xio2ie
+      '@nestjs/swagger': 6.1.2_rujkijbukplmefxxkomlxbtn6y
+      class-transformer: 0.5.1
+      class-validator: 0.13.2
+      hashids: 2.2.10
+      rxjs: 7.5.6
+    transitivePeerDependencies:
+      - '@fastify/static'
+      - reflect-metadata
+    dev: false
 
   /@hyperbolajs/prettier-config/1.0.0:
     resolution: {integrity: sha512-TxMHxFED8P+/c8zUroXw4rcKtlDJfLqXEnuMFzaoNFbUmHA1MNuBa0aGDreHVjusKvP9l+cJHNGqr8Kia10FLQ==}

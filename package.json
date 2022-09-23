@@ -23,6 +23,7 @@
     "prisma:prod": "dotenv -e .env.production prisma"
   },
   "dependencies": {
+    "@hyperbolajs/nestjs-kit": "^1.0.0",
     "@nestjs/common": "^9.1.1",
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.1.1",
